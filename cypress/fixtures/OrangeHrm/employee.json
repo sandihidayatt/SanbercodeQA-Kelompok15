@@ -2,5 +2,7 @@
     "firstName" : "Iris",
     "middleName" : "Jasmine",
     "lastName" : "Rose",
-    "idEmployee" : "058881"
+    "idEmployee" : "058881",
+    "emptyFirstName" : " ",
+    "emptyLastName" : " "
 }
