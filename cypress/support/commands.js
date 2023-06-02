@@ -8,7 +8,7 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
-Cypress.Commands.add('ketik', (locator,value) =>{
+Cypress.Commands.add('input', (locator,value) =>{
     cy.get(locator)
     .should('be.visible')
     .type(value)
