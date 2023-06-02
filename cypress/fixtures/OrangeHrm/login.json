@@ -1,0 +1,9 @@
+{
+    "validUser" : "Admin",
+    "validPass" : "admin123",
+    "url" : "https://opensource-demo.orangehrmlive.com/",
+    "invalidUser" : "Sandi",
+    "invalidPass" : "12345",
+    "emptyUser" : " ",
+    "emptyPass" : " "
+}
