@@ -11,6 +11,7 @@ describe('Add Employee Fuctionality', () => { // test suite
       AddEmployee.inputLastName(dataEmployee.lastName) // input last name
       AddEmployee.inputidEmployee(dataEmployee.idEmployee) // input id employee
       AddEmployee.clickSave() // click save
+      // validasi
       AddEmployee.messageSuccess() // check pesan success
       AddEmployee.checkProfil() // check profil
       AddEmployee.checkFirstName() // check value txtfield first name
@@ -25,6 +26,7 @@ describe('Add Employee Fuctionality', () => { // test suite
       AddEmployee.inputLastName(dataEmployee.lastName) // input last name
       AddEmployee.inputidEmployee(dataEmployee.idEmployee) // input id employee
       AddEmployee.clickSave() // click btn save
+      // validasi
       AddEmployee.checkRequiredFirstName()// check required firstname
       AddEmployee.checkUrl() //check url
     })
@@ -37,6 +39,7 @@ describe('Add Employee Fuctionality', () => { // test suite
       AddEmployee.inputLastName(dataEmployee.emptyLastName) // input empty last name
       AddEmployee.inputidEmployee(dataEmployee.idEmployee) // input id employee
       AddEmployee.clickSave() // click btn save
+      // validasi
       AddEmployee.checkRequiredLastName()// check required lastname
       AddEmployee.checkUrl() //check url
     })
@@ -49,6 +52,7 @@ describe('Add Employee Fuctionality', () => { // test suite
       AddEmployee.inputLastName(dataEmployee.emptyLastName) // input empty last name
       AddEmployee.inputidEmployee(dataEmployee.idEmployee) // input id employee
       AddEmployee.clickSave() // click btn save
+      // validasi
       AddEmployee.checkRequiredFirstName()// check required firstname
       AddEmployee.checkRequiredLastName()// check required lastname
       AddEmployee.checkUrl() //check url
@@ -62,6 +66,7 @@ describe('Add Employee Fuctionality', () => { // test suite
       AddEmployee.inputLastName(dataEmployee.lastName) // input empty last name
       AddEmployee.inputidEmployee(dataEmployee.idEmployee) // input id employee
       AddEmployee.clickCancle() // click btn cancle
+      // validasi
       AddEmployee.checkUrlCancle() //check url
     })
   })

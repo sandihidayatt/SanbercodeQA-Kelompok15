@@ -17,6 +17,7 @@ describe('Delete Employee Functionality', () => { // test suite
       cy.menuPim() // panggil menu pim
       DeleteEmployee.inputSearch(dataEmployee.dataTestNotFound) // input search data not found
       DeleteEmployee.clickSearch() // click search button
+      // validasi
       DeleteEmployee.checkNotFound() // check not found
     })
     
@@ -26,7 +27,8 @@ describe('Delete Employee Functionality', () => { // test suite
       DeleteEmployee.inputSearch(dataEmployee.firstName +' '+ dataEmployee.lastName) // input nama di txtfield search
       DeleteEmployee.clickSearch() //click search button
       DeleteEmployee.clickList() // click data di list tabel
-      DeleteEmployee.clickDeleteBtn() // click delete bitton
+      DeleteEmployee.clickDeleteBtn() // click delete 
+      // validasi
       DeleteEmployee.checkMessage() // check message succes delete
     })
   
