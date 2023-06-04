@@ -1,3 +1,5 @@
+import 'cypress-mochawesome-reporter/register';
+
 describe('Edit Contact Emengency Employee Functionality', () => { // test suite
     it('Edit Emergency Employee', () => {
         cy.login()
