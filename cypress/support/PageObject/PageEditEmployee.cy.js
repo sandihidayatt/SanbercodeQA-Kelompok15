@@ -14,8 +14,8 @@ class PageEditEmployee {
     kota = ':nth-child(3) > .oxd-grid-3 > :nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input'
     hp = ':nth-child(6) > .oxd-grid-3 > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'
     email = ':nth-child(9) > .oxd-grid-3 > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input'
-    save = '.oxd-form-actions > .oxd-button'
-    msgSucces = '.oxd-toast'
+    saveContact = '.oxd-form-actions > .oxd-button'
+    msgSucces = '.oxd-text--toast-message'
     
 
     inputSearch(search) {
@@ -45,10 +45,12 @@ class PageEditEmployee {
     }
 
     inputNickname(nickname) {
+        cy.get(this.nickname).clear()
         cy.input(this.nickname,nickname)
     }
 
     inputOtherId(otherId) {
+        cy.get(this.otherId).clear()
         cy.input(this.otherId,otherId)
     }
 
@@ -62,6 +64,49 @@ class PageEditEmployee {
 
     checkRequired2(){
         cy.get(this.requiredLastName).should('be.visible')
+    }
+
+    clickMenuContact(){
+        cy.get(this.menuContact).click({force:true})
+    }
+
+    inputKota(kota){
+        cy.get(this.kota).clear()
+        cy.input(this.kota,kota)
+    }
+
+    inputEmail(email){
+        cy.get(this.email).clear()
+        cy.input(this.email,email)
+    }
+
+    inputHp(hp){
+        cy.get(this.hp).clear()
+        cy.input(this.hp,hp)
+    } 
+
+    clickSaveContact(){
+        cy.get(this.saveContact).click({force:true})
+    }
+
+    checkMesage(){
+        cy.get(this.msgSucces).should('be.visible')
+    }
+
+    checkValueCity(){
+        cy.get(this.kota).should('have.value','Bandung')
+    }
+
+    checkSucces(){
+        cy.get(':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button').should('be.visible')
+    }
+
+    checkValueFirst() {
+        cy.get('.--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input').should('have.value','Bunga')
+    }
+
+    checkValueLast() {
+        cy.get(':nth-child(3) > :nth-child(2) > .oxd-input').should('have.value','Mawar')
     }
 
 }
