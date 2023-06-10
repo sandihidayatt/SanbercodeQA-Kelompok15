@@ -1,4 +1,3 @@
-import 'cypress-mochawesome-reporter/register';
 
 describe('Edit Contact Emengency Employee Functionality', () => { // test suite
     it('Edit Emergency Employee', () => {
@@ -15,6 +14,7 @@ describe('Edit Contact Emengency Employee Functionality', () => { // test suite
         cy.get(':nth-child(1) > .oxd-grid-3 > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Brother') //relationship
         cy.get(':nth-child(2) > .oxd-grid-3 > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input').type('0573838')// telepon
         cy.get('.oxd-button--secondary').click({force:true}) //save
+        //validasi
         cy.get('.oxd-toast').should('be.visible')
         cy.get('.oxd-table-row > :nth-child(2) > div').should('be.visible')
         cy.get('.oxd-table-row > :nth-child(4) > div').should('be.visible')
